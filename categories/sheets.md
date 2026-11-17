@@ -1,7 +1,7 @@
-# 試算表 (1)
+# Sheets (1)
 
 [← Back](../README.md)
 
 | Title |
 |---|
-| [NVIDIA 估值試算表](https://claude.ai/artifact/CHFW8JBzC1VBUcDVNwE3Vy) |
+| [NVIDIA Valuation Sheet](https://claude.ai/artifact/CHFW8JBzC1VBUcDVNwE3Vy) |

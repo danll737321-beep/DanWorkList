@@ -131,58 +131,8 @@ const CATS=[
  {k:'design',n:'Design',c:'#ec4899'},
  {k:'sheets',n:'Sheets',c:'#22c55e'},
  {k:'project',n:'Projects',c:'#6e7781'}];
-const gh=[['bible','','Bible timeline'],['english-lab','','High school English, grades 9–12'],['science','','Science and science timeline'],['social-studies','','Economics, civics, U.S. and world history'],['math-lab','','Algebra 1A/1B, visual'],['mini-slide-','',''],['table-rush','','Includes Product Bingo'],['-toefl-vocab','','1,000+ TOEFL words'],['expense-tracker','','Family expense tracker'],['kids-reward-app','','Kids reward system'],['stock_dashboard','','Stock research dashboard'],['radical-challenge','','Chinese radicals challenge']];
-const art=[
-['app','Hoover Dam Guide','EjbuYDcgWFLauWLKN2jhim',''],
-['app','Roulette Decoded','VcFfwKeJyaiW8hjtG78ywp',''],
-['app','Rubik’s Cube Permutation Lab','1VthCwdzKregMiRoPpqqvY',''],
-['app','Picture-to-Pencil Tutor','MYYE2DCZq8aDjcthrZsiT5',''],
-['app','Circuits & Ohm’s Law Podcast','KZBiptkJx6u34bBuQSUpF6',''],
-['app','Odds at the Table','6VJcY7ysDr8Xvajt9Wms5x',''],
-['app','Sheep Farm Handbook Template','CN5fSU1LGnA7ftAT867YEK',''],
-['slides','Force & Motion','JYPnF5kAWD6Zu3AaNuTU12',''],
-['slides','Circuits & Ohm’s Law','Brxf1u4JEWbdywqhq1uexM',''],
-['slides','Circuits & Ohm’s Law (Chinese)','3So4ebj4tigSCKbsVVtcej',''],
-['slides','Waves, Sound & Light','PurRFFeJ1baNsamj4THNJ5',''],
-['slides','L1 Chemical Reactions & Conservation of Mass','D5cJ5PDauo9ZL57a3uMmx7',''],
-['slides','L2 Acids, Bases & Salts','8KY1zF1WGJnJivVG4h3nyq',''],
-['slides','L3 Oxidation & Reduction','1k4GCtMyNpTLVZPhbb1UPY',''],
-['slides','Ecology: Food Webs & Energy Pyramids','AouFcnmdDwcpXmazFCH5D8',''],
-['slides','Genetics: Dominant & Recessive Traits','DbPgYiRbGEAXnXZzgrYAA6',''],
-['slides','Cells: Osmosis','44U1HxbVevL2tnHPupSNSt',''],
-['slides','Waves, Sound & Light (Chinese)','CJNiDB3hcSM76XwxqiCVFd',''],
-['docs','Lesson 9 Extra Practice: Place Value to Multiply','LUWgay7CQzPczHPyx3xVF5',''],
-['docs','NVIDIA Financial Statements & Valuation Primer','QzYwrpnCzqkLMtoNSgSjk4',''],
-['docs','Four Siblings Character Sheet: Leo, Mia, Kai, Anna','LHR7t13NdmsFpVaNroRG2v',''],
-['docs','Vegas Roulette Rules — Podcast Script','AAwYp6bqAxBSrYZ2a7xPTR',''],
-['docs','One Turn: Rubik’s Cube Permutation Podcast Script','YNTXjstnqCuB4YpMbiYAYK',''],
-['docs','When You Trap a Tiger: Summary Essay','DLgs8mAQaaCVcrbFgdyfix',''],
-['docs','2026 American Dream Report Explained','5ZDbLTH688X6fNVktfmRSP',''],
-['docs','Podcast Transcript: Circuits & Ohm’s Law','9bbKhtcuEsetKyo2pgEsfa',''],
-['docs','Division Diagnostic: Grade 5','YBeTjgSQ2qKtb65uMpWBpC',''],
-['docs','Grade 5 Multiplication & Division Practice','F8pfAQvdrmgeHhJtPbC1Ze',''],
-['docs','Middle School Chemistry Mini Lessons','VrWymGccax1FxnCaZDgshu',''],
-['docs','Middle School Physics Bilingual Mini Lessons','4QRbWyzSoFJWCzyy6NqD6C',''],
-['docs','Middle School Biology Bilingual Mini Lessons','7gMDnFSgpKEKL6VotDzGZW',''],
-['docs','Revelation and Today’s World','Pd4wC8QvpnjcDpsPZBCHyB',''],
-['design','Picture-to-Pencil Math – Grade 3 Multiplication Sample','KvAvxpk6EJQ3pcZ24P2Rou',''],
-['design','See-It Duo Character Designs','V8r5YM7HGLkB9X1KyQeL86',''],
-['design','Hoover Dam Explorer Books','4PCd75eaxtv7D6jk3RWDtv',''],
-['design','See the Math Worksheet','B2WWk6YfMAbcS6AFi1ebsy',''],
-['design','Force & Motion Infographic Poster','86uDS2HbY4FPe1a5ozAgUw',''],
-['design','Times Tables Workbook Covers','1ZMgutu6M7zYXYQnnrY4m5',''],
-['design','Table Rush Starter Worksheet','WadYij7bEZyz5EKoT9tCwE',''],
-['design','TOEFL Vocab Kids Mode','B8LkS3fhGx6AWDAqBQi3Q3',''],
-['design','Hero Classroom Door(v3)','K619U2FKHZ453i88JT1tME',''],
-['design','Hero Classroom Door(v2)','PAdUJevZPjoFCHMMsXet1b',''],
-['design','Hero Classroom Door(v1)','NsCNaWNQG4QYkwaC1WeKhS',''],
-['design','Hero Door Mockup','PhW4bKTuErhC43w3jFvwhE',''],
-['sheets','NVIDIA Valuation Sheet','CHFW8JBzC1VBUcDVNwE3Vy','']];
-const proj=['Grammar','C - Decision Analysis Engine','E - Think Tank','C - Presentation Outline Builder','P - Perspective Works Engine','strengh for working','Word Stack'];
-const items=[
- ...gh.map(([r,d,n])=>({k:'github',t:r,u:G+r,p:P+r+'/',d,n})),
- ...art.map(([k,t,id,d])=>({k,t,u:A+id,d,n:''})),
- ...proj.map(t=>({k:'project',t,u:'https://claude.ai/projects',d:'',n:'Claude Project'}))];
+const toItem=i=>i.k==='github'?{k:'github',t:i.t,u:G+i.id,p:P+i.id+'/',n:i.n||''}:i.k==='project'?{k:'project',t:i.t,u:'https://claude.ai/projects',n:'Claude Project'}:{k:i.k,t:i.t,u:A+i.id,n:i.n||''};
+let items=[];
 const cat=k=>CATS.find(c=>c.k===k);
 const $=id=>document.getElementById(id);
 const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -214,7 +164,8 @@ let tt;function toast(m){const t=$('toast');t.textContent=m;t.classList.add('on'
 $('secs').addEventListener('click',async e=>{const b=e.target.closest('[data-copy]');if(!b)return;
  try{await navigator.clipboard.writeText(b.dataset.copy);toast('Link copied')}catch(_){toast('Couldn’t copy. Long-press Open to copy.')}});
 const h=location.hash.slice(1);if(CATS.some(c=>c.k===h))open.add(h);
-render();
+$('secs').innerHTML='<p class="empty">Loading…</p>';
+fetch('items.json',{cache:'no-cache'}).then(r=>r.json()).then(j=>{items=j.items.map(toItem);render()}).catch(()=>{$('secs').innerHTML='<p class="empty">Couldn’t load the list. Reload to try again.</p>'});
 const WD=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 const iso=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
 const today=()=>iso(new Date());

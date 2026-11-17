@@ -1,0 +1,34 @@
+name: Check
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '17 15 * * 1'   # Mondays: look for broken GitHub links
+  workflow_dispatch:
+jobs:
+  privacy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/privacy_check.py
+      - run: python3 scripts/build.py --check
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check repo and Pages links
+        run: |
+          python3 - <<'EOF'
+          import json, sys, urllib.request
+          bad = []
+          for i in json.load(open('items.json'))['items']:
+              if i['k'] != 'github':
+                  continue
+              for u in (f"https://github.com/danll737321-beep/{i['id']}", f"https://danll737321-beep.github.io/{i['id']}/"):
+                  try:
+                      urllib.request.urlopen(urllib.request.Request(u, method='HEAD'), timeout=20)
+                  except Exception as e:
+                      bad.append(f'{u} -> {e}')
+          print('\n'.join(bad) or 'All links OK')
+          sys.exit(1 if bad else 0)
+          EOF
