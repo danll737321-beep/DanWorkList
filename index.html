@@ -117,7 +117,6 @@ main{padding:22px max(5vw,16px) 56px}
       <input type="date" id="todoD" aria-label="Date"><input type="time" id="todoT" aria-label="Time (optional)"><label class="hotk"><input type="checkbox" id="todoH2">Important</label><button class="btn go">Add</button></form>
     <ul id="todoL"><li class="msg">Loading…</li></ul><p class="hint" id="todoHint"></p></div></details>
   <div id="secs"></div>
-  <p class="foot">Claude Projects have no individual links; the button opens the Projects page.</p>
 </div></main>
 <div class="toast" id="toast" role="status"></div>
 <script>
@@ -125,13 +124,7 @@ main{padding:22px max(5vw,16px) 56px}
 const A='https://claude.ai/artifact/',G='https://github.com/danll737321-beep/',P='https://danll737321-beep.github.io/';
 const CATS=[
  {k:'all',n:'All',c:'#ffc914'},
- {k:'github',n:'GitHub',c:'#8b5cf6'},
- {k:'app',n:'Apps',c:'#ffc914'},
- {k:'slides',n:'Slides',c:'#3b82f6'},
- {k:'docs',n:'Docs',c:'#14b8a6'},
- {k:'design',n:'Design',c:'#ec4899'},
- {k:'sheets',n:'Sheets',c:'#22c55e'},
- {k:'project',n:'Projects',c:'#6e7781'}];
+ {k:'github',n:'GitHub',c:'#8b5cf6'}];
 const toItem=i=>i.k==='github'?{k:'github',t:i.t,u:G+i.id,p:P+i.id+'/',n:i.n||'',img:'thumbs/'+i.id+'.jpg'}:i.k==='project'?{k:'project',t:i.t,u:'https://claude.ai/projects',n:'Claude Project'}:{k:i.k,t:i.t,u:A+i.id,n:i.n||'',alt:i.alt||''};
 let items=[];
 const cat=k=>CATS.find(c=>c.k===k);
