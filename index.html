@@ -37,6 +37,7 @@ select:focus{outline:3px solid var(--sun)}
 .tab[aria-pressed=true]{background:var(--bg);color:var(--ink)}
 .tab:focus-visible{outline:3px solid var(--sun);outline-offset:-3px}
 .ctl{font:inherit;font-size:15px;font-weight:600;min-height:48px;padding:0 16px;border-radius:12px;border:0;background:rgba(255,255,255,.18);color:#fff;cursor:pointer}
+a.ctl{display:inline-flex;align-items:center;text-decoration:none}
 .ctl:focus-visible{outline:3px solid var(--sun)}
 details.sec{border-bottom:1px solid var(--line)}
 details.sec>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;min-height:60px;padding:10px 4px;font-size:20px;font-weight:700}
@@ -102,7 +103,7 @@ main{padding:22px max(5vw,16px) 56px}
   <div class="bar">
     <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
       <input id="q" type="search" placeholder="搜尋名稱，例如 Ohm、乘法、NVIDIA" aria-label="搜尋"></label>
-    <button class="ctl" id="openAll">全部展開</button><button class="ctl" id="closeAll">全部收合</button>
+    <a class="ctl" href="https://claude.ai/artifact/B6cSVJSDM2wdFqWiGSRwS3" target="_blank" rel="noopener">Claude 版</a><button class="ctl" id="openAll">全部展開</button><button class="ctl" id="closeAll">全部收合</button>
   </div>
 </div></header>
 <main><div class="wrap">
