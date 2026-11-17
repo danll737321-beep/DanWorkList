@@ -103,7 +103,7 @@ main{padding:22px max(5vw,16px) 56px}
   <div class="bar">
     <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
       <input id="q" type="search" placeholder="Search by name, e.g. Ohm, multiplication, NVIDIA" aria-label="Search"></label>
-    <a class="ctl" href="https://claude.ai/artifact/B6cSVJSDM2wdFqWiGSRwS3" target="_blank" rel="noopener">Claude version</a><button class="ctl" id="openAll">Expand all</button><button class="ctl" id="closeAll">Collapse all</button>
+    <a class="ctl" href="https://claude.ai/artifact/B6cSVJSDM2wdFqWiGSRwS3" target="_blank" rel="noopener">Claude version</a>
   </div>
 </div></header>
 <main><div class="wrap">
@@ -208,8 +208,6 @@ function render(){
 }
 $('secs').addEventListener('toggle',e=>{const d=e.target;if(!d.dataset||!d.dataset.k||$('q').value.trim())return;d.open?open.add(d.dataset.k):open.delete(d.dataset.k)},true);
 $('q').addEventListener('input',render);
-$('openAll').addEventListener('click',()=>{open=new Set(CATS.map(c=>c.k));document.querySelectorAll('details.sec').forEach(d=>d.open=true)});
-$('closeAll').addEventListener('click',()=>{open=new Set();document.querySelectorAll('details.sec').forEach(d=>d.open=false)});
 let tt;function toast(m){const t=$('toast');t.textContent=m;t.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('on'),1600)}
 $('secs').addEventListener('click',async e=>{const b=e.target.closest('[data-copy]');if(!b)return;
  try{await navigator.clipboard.writeText(b.dataset.copy);toast('Link copied')}catch(_){toast('Couldn’t copy. Long-press Open to copy.')}});
