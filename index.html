@@ -69,7 +69,8 @@ main{padding:22px max(5vw,16px) 56px}
 .toast.on{opacity:1;transform:translate(-50%,0)}
 @media(prefers-reduced-motion:reduce){.toast{transition:none}}
 @media(max-width:600px){.tab{padding:8px 10px;font-size:13px}}
-.todo{background:var(--card);border:2px solid var(--sun);border-radius:14px;padding:14px 16px;margin:0 0 18px}
+.todo{padding:4px 0 22px}
+#todo{margin-bottom:6px}
 .todo h2{margin:0 0 10px;font-size:20px;display:flex;gap:10px;align-items:center}
 .todo h2 .n{font-size:14px;font-weight:600;color:var(--mute);background:var(--chip);border-radius:20px;padding:2px 10px}
 .todo form{display:flex;gap:8px;margin-bottom:8px}
@@ -107,10 +108,10 @@ main{padding:22px max(5vw,16px) 56px}
   </div>
 </div></header>
 <main><div class="wrap">
-  <section class="todo" aria-labelledby="todoH"><h2 id="todoH">📌 To-Do<span class="n" id="todoN">0</span></h2>
+  <details class="sec" id="todo" open style="--c:#d9452b"><summary><span class="d"></span>To-Do<span class="n" id="todoN">0</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="todo">
     <form id="todoF"><input type="text" id="todoI" placeholder="新增待辦事項" aria-label="待辦內容" maxlength="200">
       <input type="date" id="todoD" aria-label="日期"><input type="time" id="todoT" aria-label="時間（可不填）"><label class="hotk"><input type="checkbox" id="todoH2">重要</label><button class="btn go">新增</button></form>
-    <ul id="todoL"><li class="msg">載入中…</li></ul><p class="hint" id="todoHint"></p></section>
+    <ul id="todoL"><li class="msg">載入中…</li></ul><p class="hint" id="todoHint"></p></div></details>
   <p class="meta" id="meta"></p>
   <div id="secs"></div>
   <p class="foot">GitHub Pages 網址依標準格式推算，stock_dashboard 已確認可用，其他未逐一驗證。Claude Projects 無個別連結，按鈕會打開 Projects 總覽。</p>
