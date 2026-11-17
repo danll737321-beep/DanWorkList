@@ -102,16 +102,15 @@ main{padding:22px max(5vw,16px) 56px}
   <h1>Daniel Hub</h1>
   <div class="bar">
     <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
-      <input id="q" type="search" placeholder="Search by name, e.g. Ohm, multiplication, NVIDIA" aria-label="Search"></label>
+      <input id="q" type="search" placeholder="Search" aria-label="Search"></label>
     <a class="ctl" href="https://claude.ai/artifact/B6cSVJSDM2wdFqWiGSRwS3" target="_blank" rel="noopener">Claude version</a>
   </div>
 </div></header>
 <main><div class="wrap">
-  <details class="sec" id="todo" open style="--c:#d9452b"><summary><span class="d"></span>To-Do<span class="n" id="todoN">0</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="todo">
+  <details class="sec" id="todo" style="--c:#d9452b"><summary><span class="d"></span>To-Do<span class="n" id="todoN">0</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="todo">
     <form id="todoF"><input type="text" id="todoI" placeholder="Add a to-do" aria-label="To-do" maxlength="200">
       <input type="date" id="todoD" aria-label="Date"><input type="time" id="todoT" aria-label="Time (optional)"><label class="hotk"><input type="checkbox" id="todoH2">Important</label><button class="btn go">Add</button></form>
     <ul id="todoL"><li class="msg">Loading…</li></ul><p class="hint" id="todoHint"></p></div></details>
-  <p class="meta" id="meta"></p>
   <div id="secs"></div>
   <p class="foot">Claude Projects have no individual links; the button opens the Projects page.</p>
 </div></main>
@@ -194,7 +193,7 @@ const card=i=>{const c=cat(i.k);return `<article class="card" style="--c:${c.c}"
   <div class="acts"><a class="btn go" href="${i.u}" target="_blank" rel="noopener">${i.k==='github'?'Repo':'Open'}</a>
   ${i.p?`<a class="btn" href="${i.p}" target="_blank" rel="noopener">Site</a>`:''}
   ${i.k!=='project'?`<button class="btn" data-copy="${i.p||i.u}">Copy link</button>`:''}</div></article>`};
-let open=new Set(['github']);
+let open=new Set();
 function render(){
  const q=$('q').value.trim().toLowerCase();
  let tot=0;
@@ -204,7 +203,6 @@ function render(){
   const o=q?true:open.has(c.k);
   return `<details class="sec" id="${c.k}" data-k="${c.k}" style="--c:${c.c}"${o?' open':''}><summary><span class="d"></span>${c.n}<span class="n">${l.length}</span>${chev}</summary><div class="grid">${l.map(card).join('')}</div></details>`}).join('');
  $('secs').innerHTML=html||'<p class="empty">No matches. Try another word.</p>';
- $('meta').textContent=`${tot} items · sorted A–Z in each category`+(q?` · search “${$('q').value.trim()}”`:'');
 }
 $('secs').addEventListener('toggle',e=>{const d=e.target;if(!d.dataset||!d.dataset.k||$('q').value.trim())return;d.open?open.add(d.dataset.k):open.delete(d.dataset.k)},true);
 $('q').addEventListener('input',render);
