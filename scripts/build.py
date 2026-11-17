@@ -33,8 +33,9 @@ def table(k, items):
     return '\n'.join(rows)
 
 def build():
-    data = json.loads((ROOT / 'items.json').read_text(encoding='utf-8'))['items']
-    out = {}
+    raw = json.loads((ROOT / 'items.json').read_text(encoding='utf-8'))['items']
+    data = [i for i in raw if i['k'] == 'github']  # public site: GitHub only
+    out = {'items.json': json.dumps({'items': data}, ensure_ascii=False, indent=1) + '\n'}
     readme = ['# Daniel Hub', '',
               "Daniel Hub — all of Daniel's GitHub repos in one place.", '',
               '**Open the app:** https://danll737321-beep.github.io/Daniel-Hub/', '',
