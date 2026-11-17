@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -84,7 +84,7 @@ main{padding:22px max(5vw,16px) 56px}
 .todo .x{font:inherit;font-size:20px;line-height:1;width:44px;height:44px;border:0;background:none;color:var(--mute);cursor:pointer;border-radius:10px}
 .todo .x:focus-visible{outline:3px solid var(--sun)}
 .todo .w{font-size:12px;font-weight:700;border-radius:8px;padding:3px 8px;white-space:nowrap;flex:none;min-width:58px;text-align:center}
-.todo li.hot .tx::before{content:'重要 ';color:#d9452b;font-weight:700}
+.todo li.hot .tx::before{content:'Important · ';color:#d9452b;font-weight:700}
 .todo li.done .w{opacity:.45}
 .todo .hint{margin:6px 0 0;font-size:13px;color:var(--mute)}
 .todo form{flex-wrap:wrap}
@@ -100,47 +100,46 @@ main{padding:22px max(5vw,16px) 56px}
 <body>
 <header class="cover"><div class="wrap">
   <h1>Daniel Hub</h1>
-  <p class="sub" id="sub">GitHub、Claude App、簡報、文件與設計，一站打開</p>
   <div class="bar">
     <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
-      <input id="q" type="search" placeholder="搜尋名稱，例如 Ohm、乘法、NVIDIA" aria-label="搜尋"></label>
-    <a class="ctl" href="https://claude.ai/artifact/B6cSVJSDM2wdFqWiGSRwS3" target="_blank" rel="noopener">Claude 版</a><button class="ctl" id="openAll">全部展開</button><button class="ctl" id="closeAll">全部收合</button>
+      <input id="q" type="search" placeholder="Search by name, e.g. Ohm, multiplication, NVIDIA" aria-label="Search"></label>
+    <a class="ctl" href="https://claude.ai/artifact/B6cSVJSDM2wdFqWiGSRwS3" target="_blank" rel="noopener">Claude version</a><button class="ctl" id="openAll">Expand all</button><button class="ctl" id="closeAll">Collapse all</button>
   </div>
 </div></header>
 <main><div class="wrap">
   <details class="sec" id="todo" open style="--c:#d9452b"><summary><span class="d"></span>To-Do<span class="n" id="todoN">0</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="todo">
-    <form id="todoF"><input type="text" id="todoI" placeholder="新增待辦事項" aria-label="待辦內容" maxlength="200">
-      <input type="date" id="todoD" aria-label="日期"><input type="time" id="todoT" aria-label="時間（可不填）"><label class="hotk"><input type="checkbox" id="todoH2">重要</label><button class="btn go">新增</button></form>
-    <ul id="todoL"><li class="msg">載入中…</li></ul><p class="hint" id="todoHint"></p></div></details>
+    <form id="todoF"><input type="text" id="todoI" placeholder="Add a to-do" aria-label="To-do" maxlength="200">
+      <input type="date" id="todoD" aria-label="Date"><input type="time" id="todoT" aria-label="Time (optional)"><label class="hotk"><input type="checkbox" id="todoH2">Important</label><button class="btn go">Add</button></form>
+    <ul id="todoL"><li class="msg">Loading…</li></ul><p class="hint" id="todoHint"></p></div></details>
   <p class="meta" id="meta"></p>
   <div id="secs"></div>
-  <p class="foot">GitHub Pages 網址依標準格式推算，stock_dashboard 已確認可用，其他未逐一驗證。Claude Projects 無個別連結，按鈕會打開 Projects 總覽。</p>
+  <p class="foot">Claude Projects have no individual links; the button opens the Projects page.</p>
 </div></main>
 <div class="toast" id="toast" role="status"></div>
 <script>
 {
 const A='https://claude.ai/artifact/',G='https://github.com/danll737321-beep/',P='https://danll737321-beep.github.io/';
 const CATS=[
- {k:'all',n:'全部',c:'#ffc914'},
+ {k:'all',n:'All',c:'#ffc914'},
  {k:'github',n:'GitHub',c:'#8b5cf6'},
- {k:'app',n:'互動 App',c:'#ffc914'},
- {k:'slides',n:'簡報',c:'#3b82f6'},
- {k:'docs',n:'文件',c:'#14b8a6'},
- {k:'design',n:'設計',c:'#ec4899'},
- {k:'sheets',n:'試算表',c:'#22c55e'},
+ {k:'app',n:'Apps',c:'#ffc914'},
+ {k:'slides',n:'Slides',c:'#3b82f6'},
+ {k:'docs',n:'Docs',c:'#14b8a6'},
+ {k:'design',n:'Design',c:'#ec4899'},
+ {k:'sheets',n:'Sheets',c:'#22c55e'},
  {k:'project',n:'Projects',c:'#6e7781'}];
-const gh=[['bible','','聖經時間軸'],['english-lab','','高中英文 9–12 年級'],['science','','自然科學・科學時間軸'],['social-studies','','看懂經濟、公民、美國史、世界史'],['math-lab','','Algebra 1A/1B 圖解'],['mini-slide-','',''],['table-rush','','含乘積賓果'],['-toefl-vocab','','TOEFL 單字 1,000+'],['expense-tracker','','食衣住行育樂帳本'],['kids-reward-app','','孩子獎勵系統'],['stock_dashboard','','股票研究終端'],['radical-challenge','','部首大挑戰']];
+const gh=[['bible','','Bible timeline'],['english-lab','','High school English, grades 9–12'],['science','','Science and science timeline'],['social-studies','','Economics, civics, U.S. and world history'],['math-lab','','Algebra 1A/1B, visual'],['mini-slide-','',''],['table-rush','','Includes Product Bingo'],['-toefl-vocab','','1,000+ TOEFL words'],['expense-tracker','','Family expense tracker'],['kids-reward-app','','Kids reward system'],['stock_dashboard','','Stock research dashboard'],['radical-challenge','','Chinese radicals challenge']];
 const art=[
-['app','Hoover Dam 導覽','EjbuYDcgWFLauWLKN2jhim',''],
+['app','Hoover Dam Guide','EjbuYDcgWFLauWLKN2jhim',''],
 ['app','Roulette Decoded','VcFfwKeJyaiW8hjtG78ywp',''],
-['app','魔方置換實驗室','1VthCwdzKregMiRoPpqqvY',''],
+['app','Rubik’s Cube Permutation Lab','1VthCwdzKregMiRoPpqqvY',''],
 ['app','Picture-to-Pencil Tutor','MYYE2DCZq8aDjcthrZsiT5',''],
-['app','電路與歐姆定律 Podcast','KZBiptkJx6u34bBuQSUpF6',''],
+['app','Circuits & Ohm’s Law Podcast','KZBiptkJx6u34bBuQSUpF6',''],
 ['app','Odds at the Table','6VJcY7ysDr8Xvajt9Wms5x',''],
-['app','羊農場手冊範本','CN5fSU1LGnA7ftAT867YEK',''],
+['app','Sheep Farm Handbook Template','CN5fSU1LGnA7ftAT867YEK',''],
 ['slides','Force & Motion','JYPnF5kAWD6Zu3AaNuTU12',''],
 ['slides','Circuits & Ohm’s Law','Brxf1u4JEWbdywqhq1uexM',''],
-['slides','電路與歐姆定律','3So4ebj4tigSCKbsVVtcej',''],
+['slides','Circuits & Ohm’s Law (Chinese)','3So4ebj4tigSCKbsVVtcej',''],
 ['slides','Waves, Sound & Light','PurRFFeJ1baNsamj4THNJ5',''],
 ['slides','L1 Chemical Reactions & Conservation of Mass','D5cJ5PDauo9ZL57a3uMmx7',''],
 ['slides','L2 Acids, Bases & Salts','8KY1zF1WGJnJivVG4h3nyq',''],
@@ -148,35 +147,35 @@ const art=[
 ['slides','Ecology: Food Webs & Energy Pyramids','AouFcnmdDwcpXmazFCH5D8',''],
 ['slides','Genetics: Dominant & Recessive Traits','DbPgYiRbGEAXnXZzgrYAA6',''],
 ['slides','Cells: Osmosis','44U1HxbVevL2tnHPupSNSt',''],
-['slides','波動、聲音與光','CJNiDB3hcSM76XwxqiCVFd',''],
+['slides','Waves, Sound & Light (Chinese)','CJNiDB3hcSM76XwxqiCVFd',''],
 ['docs','Lesson 9 Extra Practice: Place Value to Multiply','LUWgay7CQzPczHPyx3xVF5',''],
-['docs','NVIDIA 三表解析與估值入門','QzYwrpnCzqkLMtoNSgSjk4',''],
-['docs','四兄妹角色設定總表 Leo・Mia・Kai・Anna','LHR7t13NdmsFpVaNroRG2v',''],
+['docs','NVIDIA Financial Statements & Valuation Primer','QzYwrpnCzqkLMtoNSgSjk4',''],
+['docs','Four Siblings Character Sheet: Leo, Mia, Kai, Anna','LHR7t13NdmsFpVaNroRG2v',''],
 ['docs','Vegas Roulette Rules — Podcast Script','AAwYp6bqAxBSrYZ2a7xPTR',''],
-['docs','一次轉動：魔方置換 Podcast 腳本','YNTXjstnqCuB4YpMbiYAYK',''],
+['docs','One Turn: Rubik’s Cube Permutation Podcast Script','YNTXjstnqCuB4YpMbiYAYK',''],
 ['docs','When You Trap a Tiger: Summary Essay','DLgs8mAQaaCVcrbFgdyfix',''],
-['docs','2026 美國夢報告解讀','5ZDbLTH688X6fNVktfmRSP',''],
-['docs','Podcast 逐字稿：電路與歐姆定律','9bbKhtcuEsetKyo2pgEsfa',''],
+['docs','2026 American Dream Report Explained','5ZDbLTH688X6fNVktfmRSP',''],
+['docs','Podcast Transcript: Circuits & Ohm’s Law','9bbKhtcuEsetKyo2pgEsfa',''],
 ['docs','Division Diagnostic: Grade 5','YBeTjgSQ2qKtb65uMpWBpC',''],
 ['docs','Grade 5 Multiplication & Division Practice','F8pfAQvdrmgeHhJtPbC1Ze',''],
-['docs','國中化學三大主題 Mini Lessons','VrWymGccax1FxnCaZDgshu',''],
-['docs','國中物理雙語迷你教案','4QRbWyzSoFJWCzyy6NqD6C',''],
-['docs','國中生物雙語迷你課教案','7gMDnFSgpKEKL6VotDzGZW',''],
-['docs','啟示錄與當代世界','Pd4wC8QvpnjcDpsPZBCHyB',''],
+['docs','Middle School Chemistry Mini Lessons','VrWymGccax1FxnCaZDgshu',''],
+['docs','Middle School Physics Bilingual Mini Lessons','4QRbWyzSoFJWCzyy6NqD6C',''],
+['docs','Middle School Biology Bilingual Mini Lessons','7gMDnFSgpKEKL6VotDzGZW',''],
+['docs','Revelation and Today’s World','Pd4wC8QvpnjcDpsPZBCHyB',''],
 ['design','Picture-to-Pencil Math – Grade 3 Multiplication Sample','KvAvxpk6EJQ3pcZ24P2Rou',''],
-['design','See-It Duo 角色設計稿','V8r5YM7HGLkB9X1KyQeL86',''],
+['design','See-It Duo Character Designs','V8r5YM7HGLkB9X1KyQeL86',''],
 ['design','Hoover Dam Explorer Books','4PCd75eaxtv7D6jk3RWDtv',''],
 ['design','See the Math Worksheet','B2WWk6YfMAbcS6AFi1ebsy',''],
-['design','力與運動 資訊圖海報','86uDS2HbY4FPe1a5ozAgUw',''],
+['design','Force & Motion Infographic Poster','86uDS2HbY4FPe1a5ozAgUw',''],
 ['design','Times Tables Workbook Covers','1ZMgutu6M7zYXYQnnrY4m5',''],
 ['design','Table Rush Starter Worksheet','WadYij7bEZyz5EKoT9tCwE',''],
 ['design','TOEFL Vocab Kids Mode','B8LkS3fhGx6AWDAqBQi3Q3',''],
-['design','Hero Classroom Door（版本 3）','K619U2FKHZ453i88JT1tME',''],
-['design','Hero Classroom Door（版本 2）','PAdUJevZPjoFCHMMsXet1b',''],
-['design','Hero Classroom Door（版本 1）','NsCNaWNQG4QYkwaC1WeKhS',''],
+['design','Hero Classroom Door(v3)','K619U2FKHZ453i88JT1tME',''],
+['design','Hero Classroom Door(v2)','PAdUJevZPjoFCHMMsXet1b',''],
+['design','Hero Classroom Door(v1)','NsCNaWNQG4QYkwaC1WeKhS',''],
 ['design','Hero Door Mockup','PhW4bKTuErhC43w3jFvwhE',''],
-['sheets','NVIDIA 估值試算表','CHFW8JBzC1VBUcDVNwE3Vy','']];
-const proj=['Grammar','C-決策分析引擎','E-智囊團','C-簡報骨架構引','P-觀點作品引擎','strengh for working','Word Stack'];
+['sheets','NVIDIA Valuation Sheet','CHFW8JBzC1VBUcDVNwE3Vy','']];
+const proj=['Grammar','C - Decision Analysis Engine','E - Think Tank','C - Presentation Outline Builder','P - Perspective Works Engine','strengh for working','Word Stack'];
 const items=[
  ...gh.map(([r,d,n])=>({k:'github',t:r,u:G+r,p:P+r+'/',d,n})),
  ...art.map(([k,t,id,d])=>({k,t,u:A+id,d,n:''})),
@@ -192,9 +191,9 @@ const chev='<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentCol
 const card=i=>{const c=cat(i.k);return `<article class="card" style="--c:${c.c}">
   <div class="top"><span class="tag"><i></i>${c.n}</span></div>
   <h3>${esc(i.t)}</h3>${i.n?`<p class="note">${esc(i.n)}</p>`:''}
-  <div class="acts"><a class="btn go" href="${i.u}" target="_blank" rel="noopener">${i.k==='github'?'Repo':'開啟'}</a>
-  ${i.p?`<a class="btn" href="${i.p}" target="_blank" rel="noopener">網站</a>`:''}
-  ${i.k!=='project'?`<button class="btn" data-copy="${i.p||i.u}">複製連結</button>`:''}</div></article>`};
+  <div class="acts"><a class="btn go" href="${i.u}" target="_blank" rel="noopener">${i.k==='github'?'Repo':'Open'}</a>
+  ${i.p?`<a class="btn" href="${i.p}" target="_blank" rel="noopener">Site</a>`:''}
+  ${i.k!=='project'?`<button class="btn" data-copy="${i.p||i.u}">Copy link</button>`:''}</div></article>`};
 let open=new Set(['github']);
 function render(){
  const q=$('q').value.trim().toLowerCase();
@@ -204,8 +203,8 @@ function render(){
   tot+=l.length;if(q&&!l.length)return '';
   const o=q?true:open.has(c.k);
   return `<details class="sec" id="${c.k}" data-k="${c.k}" style="--c:${c.c}"${o?' open':''}><summary><span class="d"></span>${c.n}<span class="n">${l.length}</span>${chev}</summary><div class="grid">${l.map(card).join('')}</div></details>`}).join('');
- $('secs').innerHTML=html||'<p class="empty">沒有符合的項目，換個關鍵字試試。</p>';
- $('meta').textContent=`共 ${tot} 項・各分類依 A–Z 排序`+(q?`・搜尋「${$('q').value.trim()}」`:'');
+ $('secs').innerHTML=html||'<p class="empty">No matches. Try another word.</p>';
+ $('meta').textContent=`${tot} items · sorted A–Z in each category`+(q?` · search “${$('q').value.trim()}”`:'');
 }
 $('secs').addEventListener('toggle',e=>{const d=e.target;if(!d.dataset||!d.dataset.k||$('q').value.trim())return;d.open?open.add(d.dataset.k):open.delete(d.dataset.k)},true);
 $('q').addEventListener('input',render);
@@ -213,11 +212,10 @@ $('openAll').addEventListener('click',()=>{open=new Set(CATS.map(c=>c.k));docume
 $('closeAll').addEventListener('click',()=>{open=new Set();document.querySelectorAll('details.sec').forEach(d=>d.open=false)});
 let tt;function toast(m){const t=$('toast');t.textContent=m;t.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('on'),1600)}
 $('secs').addEventListener('click',async e=>{const b=e.target.closest('[data-copy]');if(!b)return;
- try{await navigator.clipboard.writeText(b.dataset.copy);toast('已複製連結')}catch(_){toast('無法複製，請長按「開啟」複製')}});
+ try{await navigator.clipboard.writeText(b.dataset.copy);toast('Link copied')}catch(_){toast('Couldn’t copy. Long-press Open to copy.')}});
 const h=location.hash.slice(1);if(CATS.some(c=>c.k===h))open.add(h);
-$('sub').textContent=`${gh.length} 個 GitHub repo、${art.length} 個 Claude 作品、${proj.length} 個 Projects，一站打開`;
 render();
-const WD='日一二三四五六';
+const WD=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 const iso=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
 const today=()=>iso(new Date());
 const DC=[['#ea580c','#fff'],['#2563eb','#fff'],['#0d9488','#fff'],['#7c3aed','#fff'],['#f59e0b','#1f2328'],['#16a34a','#fff'],['#db2777','#fff']];
@@ -233,7 +231,7 @@ function renderT(){
  const t0=today();
  const l=todos.filter(x=>!x.del&&!(x.w&&x.w<t0)).sort((a,b)=>(a.done||0)-(b.done||0)||(a.w||'9').localeCompare(b.w||'9')||tmOf(a).localeCompare(tmOf(b))||(b.hot||0)-(a.hot||0)||(a.t||0)-(b.t||0));
  $('todoN').textContent=l.filter(x=>!x.done).length;
- $('todoL').innerHTML=l.length?l.map(x=>`<li class="${x.done?'done':''}${x.hot&&!x.done?' hot':''}${!x.done&&x.w&&x.w<t0?' over':''}"><label><input type="checkbox" data-id="${esc(x.id)}"${x.done?' checked':''}>${x.w?`<span class="w" style="${dc(x.w)}">${wk(x.w)}</span>`:''}<span class="tx">${esc(String(x.s||''))}</span></label><button class="x" data-del="${esc(x.id)}" aria-label="刪除">×</button></li>`).join(''):'<li class="msg">目前沒有待辦事項。</li>';
+ $('todoL').innerHTML=l.length?l.map(x=>`<li class="${x.done?'done':''}${x.hot&&!x.done?' hot':''}${!x.done&&x.w&&x.w<t0?' over':''}"><label><input type="checkbox" data-id="${esc(x.id)}"${x.done?' checked':''}>${x.w?`<span class="w" style="${dc(x.w)}">${wk(x.w)}</span>`:''}<span class="tx">${esc(String(x.s||''))}</span></label><button class="x" data-del="${esc(x.id)}" aria-label="Delete">×</button></li>`).join(''):'<li class="msg">Nothing to do right now.</li>';
 }
 const local={
  load(){try{return JSON.parse(localStorage.getItem('dhub-todo')||'[]')}catch(_){return []}},
@@ -242,25 +240,25 @@ const local={
  async patch(id,p){const x=todos.find(o=>o.id===id);if(x){Object.assign(x,p);this.save();renderT()}}
 };
 function useLocal(note){store=local;todos=local.load();ready=true;$('todoHint').innerHTML=note;renderT()}
-const flog=()=>toast('沒有儲存成功，請再試一次');
+const flog=()=>toast('Didn’t save. Please try again.');
 $('todoF').addEventListener('submit',async e=>{e.preventDefault();if(!store)return;const v=$('todoI').value.trim();if(!v)return;
  const tv=$('todoT').value;const x={id:'u'+Date.now(),s:tv?`${v} ${tv}`:v,tm:tv||'',w:$('todoD').value||today(),hot:$('todoH2').checked?1:0,done:0,del:0,t:Date.now(),src:'me'};
  $('todoI').value='';$('todoT').value='';$('todoH2').checked=false;$('todoD').value=today();
  try{await store.put(x)}catch(_){flog()}});
 $('todoL').addEventListener('change',async e=>{const id=e.target.dataset.id;if(!id||!store)return;try{await store.patch(id,{done:e.target.checked?1:0})}catch(_){flog()}});
 $('todoL').addEventListener('click',async e=>{const b=e.target.closest('[data-del]');if(!b||!store)return;
- try{await store.patch(b.dataset.del,{del:1});toast('已刪除，之後不會再加回來')}catch(_){flog()}});
+ try{await store.patch(b.dataset.del,{del:1});toast('Deleted. It won’t come back.')}catch(_){flog()}});
 if(window.claude&&window.claude.use){
  (async()=>{let db=null;try{db=await window.claude.use('db')}catch(_){}
-  if(!db){useLocal('目前無法連到雲端，待辦暫存在這個瀏覽器。');return}
+  if(!db){useLocal('Can’t reach the cloud right now. To-dos are saved in this browser for now.');return}
   const col=db.collection('todos');
   store={put:x=>{const{id,...b}=x;return col.doc(id).set(b)},patch:(id,p)=>col.doc(id).update(p)};
-  const tm=setTimeout(()=>{if(!ready){ready=true;$('todoHint').textContent='暫時連不上雲端，稍後再開一次。';renderT()}},10000);
-  col.onSnapshot(sn=>{todos=sn.docs.map(d=>({id:d.id,...d.data()}));if(!sn.metadata.fromCache){clearTimeout(tm);$('todoHint').textContent='每天清晨自動從行事曆和 Gmail 更新・刪掉的不會再加回來・各裝置同步'}ready=true;renderT()},
-   ()=>{clearTimeout(tm);ready=true;$('todoHint').textContent='雲端連線中斷，重新整理頁面再試。';renderT()});
+  const tm=setTimeout(()=>{if(!ready){ready=true;$('todoHint').textContent='Can’t reach the cloud right now. Try again later.';renderT()}},10000);
+  col.onSnapshot(sn=>{todos=sn.docs.map(d=>({id:d.id,...d.data()}));if(!sn.metadata.fromCache){clearTimeout(tm);$('todoHint').textContent='Updated every morning from Calendar and Gmail · deleted items stay deleted · synced across devices'}ready=true;renderT()},
+   ()=>{clearTimeout(tm);ready=true;$('todoHint').textContent='Lost the cloud connection. Reload the page to try again.';renderT()});
  })();
 }else{
- useLocal(`這裡的待辦只存在這個瀏覽器。每日自動更新、各裝置同步的版本在 <a href="${HUB}" target="_blank" rel="noopener">Daniel Hub（Claude）</a>。`);
+ useLocal(`To-dos here are saved only in this browser. The daily-updated, synced list is in <a href="${HUB}" target="_blank" rel="noopener">Daniel Hub on Claude</a>.`);
 }
 }
 </script>
