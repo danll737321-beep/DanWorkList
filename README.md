@@ -18,7 +18,7 @@ Each category is sorted A–Z. Click a category name to expand it.
 | [expense-tracker](https://github.com/danll737321-beep/expense-tracker) | [Pages](https://danll737321-beep.github.io/expense-tracker/) | Family expense tracker |
 | [kids-reward-app](https://github.com/danll737321-beep/kids-reward-app) | [Pages](https://danll737321-beep.github.io/kids-reward-app/) | Kids reward system |
 | [math-lab](https://github.com/danll737321-beep/math-lab) | [Pages](https://danll737321-beep.github.io/math-lab/) | Algebra 1A/1B, visual |
-| [mini-slide-](https://github.com/danll737321-beep/mini-slide-) | [Pages](https://danll737321-beep.github.io/mini-slide-/) |  |
+| [mini-slide-](https://github.com/danll737321-beep/mini-slide-) | [Pages](https://danll737321-beep.github.io/mini-slide-/) | Science mini lessons |
 | [radical-challenge](https://github.com/danll737321-beep/radical-challenge) | [Pages](https://danll737321-beep.github.io/radical-challenge/) | Chinese radicals challenge |
 | [science](https://github.com/danll737321-beep/science) | [Pages](https://danll737321-beep.github.io/science/) | Science and science timeline |
 | [social-studies](https://github.com/danll737321-beep/social-studies) | [Pages](https://danll737321-beep.github.io/social-studies/) | Economics, civics, U.S. and world history |

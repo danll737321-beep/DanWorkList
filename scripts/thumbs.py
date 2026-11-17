@@ -11,7 +11,9 @@ from playwright.sync_api import sync_playwright
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / 'thumbs'
 OUT.mkdir(exist_ok=True)
-items = [i for i in json.loads((ROOT / 'items.json').read_text(encoding='utf-8'))['items'] if i['k'] == 'github']
+# Sites whose first screen shows personal names: never thumbnail them.
+SKIP = {'kids-reward-app'}
+items = [i for i in json.loads((ROOT / 'items.json').read_text(encoding='utf-8'))['items'] if i['k'] == 'github' and i['id'] not in SKIP]
 todo = [i for i in items if '--all' in sys.argv or not (OUT / f"{i['id']}.jpg").exists()]
 made = 0
 with sync_playwright() as p:
