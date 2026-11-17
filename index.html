@@ -54,6 +54,7 @@ main{padding:22px max(5vw,16px) 56px}
 .grid{display:flex;flex-direction:column}
 .card{display:flex;align-items:center;gap:8px 12px;flex-wrap:wrap;min-height:52px;padding:6px 0;border-top:1px solid var(--line)}
 .card .top{display:none}
+.thumb{width:96px;height:60px;border-radius:8px;object-fit:cover;border:1px solid var(--line);flex:none;background:var(--chip)}
 .card .tt{flex:1 1 240px}
 .card .acts{margin:0;padding:0;flex-wrap:nowrap}
 .card .btn{min-height:40px;padding:0 12px}
@@ -131,7 +132,7 @@ const CATS=[
  {k:'design',n:'Design',c:'#ec4899'},
  {k:'sheets',n:'Sheets',c:'#22c55e'},
  {k:'project',n:'Projects',c:'#6e7781'}];
-const toItem=i=>i.k==='github'?{k:'github',t:i.t,u:G+i.id,p:P+i.id+'/',n:i.n||''}:i.k==='project'?{k:'project',t:i.t,u:'https://claude.ai/projects',n:'Claude Project'}:{k:i.k,t:i.t,u:A+i.id,n:i.n||''};
+const toItem=i=>i.k==='github'?{k:'github',t:i.t,u:G+i.id,p:P+i.id+'/',n:i.n||'',img:'thumbs/'+i.id+'.jpg'}:i.k==='project'?{k:'project',t:i.t,u:'https://claude.ai/projects',n:'Claude Project'}:{k:i.k,t:i.t,u:A+i.id,n:i.n||'',alt:i.alt||''};
 let items=[];
 const cat=k=>CATS.find(c=>c.k===k);
 const $=id=>document.getElementById(id);
@@ -143,9 +144,10 @@ const cmp=(x,y)=>nm(x.t).localeCompare(nm(y.t),'en',{sensitivity:'base',numeric:
 const chev='<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>';
 const card=i=>{const c=cat(i.k);return `<article class="card" style="--c:${c.c}">
   <div class="top"><span class="tag"><i></i>${c.n}</span></div>
-  <div class="tt"><h3>${esc(i.t)}</h3>${i.n?`<p class="note">${esc(i.n)}</p>`:''}</div>
+  ${i.img?`<img class="thumb" src="${i.img}" alt="" loading="lazy" onerror="this.remove()">`:''}<div class="tt"><h3>${esc(i.t)}</h3>${i.n?`<p class="note">${esc(i.n)}</p>`:''}</div>
   <div class="acts"><a class="btn go" href="${i.u}" target="_blank" rel="noopener">${i.k==='github'?'Repo':'Open'}</a>
   ${i.p?`<a class="btn" href="${i.p}" target="_blank" rel="noopener">Site</a>`:''}
+  ${i.alt?`<a class="btn" href="${A+i.alt}" target="_blank" rel="noopener">Chinese</a>`:''}
   ${i.k!=='project'?`<button class="btn" data-copy="${i.p||i.u}">Copy link</button>`:''}</div></article>`};
 let open=new Set();
 function render(){

@@ -35,8 +35,8 @@ def main():
         for rx in DATE:
             if rx.search(text):
                 bad.append(f"items.json: '{i['t']}' contains a date")
-        if set(i) - {'key', 'k', 't', 'id', 'n'}:
-            bad.append(f"items.json: '{i['t']}' has extra fields {sorted(set(i) - {'key','k','t','id','n'})}")
+        if set(i) - {'key', 'k', 't', 'id', 'n', 'alt'}:
+            bad.append(f"items.json: '{i['t']}' has extra fields {sorted(set(i) - {'key','k','t','id','n','alt'})}")
     # private words must not appear anywhere in the published files
     for p in ['index.html', 'README.md', *[str(x.relative_to(ROOT)) for x in (ROOT / 'categories').glob('*.md')]]:
         low = (ROOT / p).read_text(encoding='utf-8').lower()

@@ -2,6 +2,6 @@
 
 [← Back](../README.md)
 
-| Title |
-|---|
-| [NVIDIA Valuation Sheet](https://claude.ai/artifact/CHFW8JBzC1VBUcDVNwE3Vy) |
+| Title | Chinese |
+|---|---|
+| [NVIDIA Valuation Sheet](https://claude.ai/artifact/CHFW8JBzC1VBUcDVNwE3Vy) |  |

@@ -1,0 +1,29 @@
+name: Thumbnails
+on:
+  push:
+    branches: [main]
+    paths: [items.json]
+  workflow_dispatch:
+    inputs:
+      all:
+        description: Redo every thumbnail
+        type: boolean
+        default: false
+permissions:
+  contents: write
+jobs:
+  thumbs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install playwright pillow && python -m playwright install --with-deps chromium
+      - run: python scripts/thumbs.py ${{ inputs.all && '--all' || '' }}
+      - name: Commit new thumbnails
+        run: |
+          git add thumbs
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git -c user.name=Daniel -c user.email=danll737321-beep@users.noreply.github.com commit -m "Update thumbnails"
+          git push

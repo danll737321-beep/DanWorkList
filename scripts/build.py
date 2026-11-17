@@ -19,6 +19,9 @@ def key(i):
 def md(s):
     return s.replace('|', '\\|')
 
+def zh(i):
+    return f"[Chinese]({A}{i['alt']})" if i.get('alt') else ''
+
 def table(k, items):
     if k == 'github':
         rows = ['| Repo | Site | Note |', '|---|---|---|']
@@ -27,8 +30,8 @@ def table(k, items):
         rows = ['| Project | Link |', '|---|---|']
         rows += [f"| {md(i['t'])} | [Projects](https://claude.ai/projects) |" for i in items]
     else:
-        rows = ['| Title |', '|---|']
-        rows += [f"| [{md(i['t'])}]({A}{i['id']}) |" for i in items]
+        rows = ['| Title | Chinese |', '|---|---|']
+        rows += [f"| [{md(i['t'])}]({A}{i['id']}) | {zh(i)} |" for i in items]
     return '\n'.join(rows)
 
 def build():

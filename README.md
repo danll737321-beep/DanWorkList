@@ -33,36 +33,34 @@ Each category is sorted A–Z. Click a category name to expand it.
 <details>
 <summary><b>Apps</b> (7)</summary>
 
-| Title |
-|---|
-| [Circuits & Ohm’s Law Podcast](https://claude.ai/artifact/KZBiptkJx6u34bBuQSUpF6) |
-| [Hoover Dam Guide](https://claude.ai/artifact/EjbuYDcgWFLauWLKN2jhim) |
-| [Odds at the Table](https://claude.ai/artifact/6VJcY7ysDr8Xvajt9Wms5x) |
-| [Picture-to-Pencil Tutor](https://claude.ai/artifact/MYYE2DCZq8aDjcthrZsiT5) |
-| [Roulette Decoded](https://claude.ai/artifact/VcFfwKeJyaiW8hjtG78ywp) |
-| [Rubik’s Cube Permutation Lab](https://claude.ai/artifact/1VthCwdzKregMiRoPpqqvY) |
-| [Sheep Farm Handbook Template](https://claude.ai/artifact/CN5fSU1LGnA7ftAT867YEK) |
+| Title | Chinese |
+|---|---|
+| [Circuits & Ohm’s Law Podcast](https://claude.ai/artifact/KZBiptkJx6u34bBuQSUpF6) |  |
+| [Hoover Dam Guide](https://claude.ai/artifact/EjbuYDcgWFLauWLKN2jhim) |  |
+| [Odds at the Table](https://claude.ai/artifact/6VJcY7ysDr8Xvajt9Wms5x) |  |
+| [Picture-to-Pencil Tutor](https://claude.ai/artifact/MYYE2DCZq8aDjcthrZsiT5) |  |
+| [Roulette Decoded](https://claude.ai/artifact/VcFfwKeJyaiW8hjtG78ywp) |  |
+| [Rubik’s Cube Permutation Lab](https://claude.ai/artifact/1VthCwdzKregMiRoPpqqvY) |  |
+| [Sheep Farm Handbook Template](https://claude.ai/artifact/CN5fSU1LGnA7ftAT867YEK) |  |
 
 [Own page](categories/apps.md)
 
 </details>
 
 <details>
-<summary><b>Slides</b> (11)</summary>
+<summary><b>Slides</b> (9)</summary>
 
-| Title |
-|---|
-| [Cells: Osmosis](https://claude.ai/artifact/44U1HxbVevL2tnHPupSNSt) |
-| [Circuits & Ohm’s Law](https://claude.ai/artifact/Brxf1u4JEWbdywqhq1uexM) |
-| [Circuits & Ohm’s Law (Chinese)](https://claude.ai/artifact/3So4ebj4tigSCKbsVVtcej) |
-| [Ecology: Food Webs & Energy Pyramids](https://claude.ai/artifact/AouFcnmdDwcpXmazFCH5D8) |
-| [Force & Motion](https://claude.ai/artifact/JYPnF5kAWD6Zu3AaNuTU12) |
-| [Genetics: Dominant & Recessive Traits](https://claude.ai/artifact/DbPgYiRbGEAXnXZzgrYAA6) |
-| [L1 Chemical Reactions & Conservation of Mass](https://claude.ai/artifact/D5cJ5PDauo9ZL57a3uMmx7) |
-| [L2 Acids, Bases & Salts](https://claude.ai/artifact/8KY1zF1WGJnJivVG4h3nyq) |
-| [L3 Oxidation & Reduction](https://claude.ai/artifact/1k4GCtMyNpTLVZPhbb1UPY) |
-| [Waves, Sound & Light](https://claude.ai/artifact/PurRFFeJ1baNsamj4THNJ5) |
-| [Waves, Sound & Light (Chinese)](https://claude.ai/artifact/CJNiDB3hcSM76XwxqiCVFd) |
+| Title | Chinese |
+|---|---|
+| [Cells: Osmosis](https://claude.ai/artifact/44U1HxbVevL2tnHPupSNSt) |  |
+| [Circuits & Ohm’s Law](https://claude.ai/artifact/Brxf1u4JEWbdywqhq1uexM) | [Chinese](https://claude.ai/artifact/3So4ebj4tigSCKbsVVtcej) |
+| [Ecology: Food Webs & Energy Pyramids](https://claude.ai/artifact/AouFcnmdDwcpXmazFCH5D8) |  |
+| [Force & Motion](https://claude.ai/artifact/JYPnF5kAWD6Zu3AaNuTU12) |  |
+| [Genetics: Dominant & Recessive Traits](https://claude.ai/artifact/DbPgYiRbGEAXnXZzgrYAA6) |  |
+| [L1 Chemical Reactions & Conservation of Mass](https://claude.ai/artifact/D5cJ5PDauo9ZL57a3uMmx7) |  |
+| [L2 Acids, Bases & Salts](https://claude.ai/artifact/8KY1zF1WGJnJivVG4h3nyq) |  |
+| [L3 Oxidation & Reduction](https://claude.ai/artifact/1k4GCtMyNpTLVZPhbb1UPY) |  |
+| [Waves, Sound & Light](https://claude.ai/artifact/PurRFFeJ1baNsamj4THNJ5) | [Chinese](https://claude.ai/artifact/CJNiDB3hcSM76XwxqiCVFd) |
 
 [Own page](categories/slides.md)
 
@@ -71,44 +69,41 @@ Each category is sorted A–Z. Click a category name to expand it.
 <details>
 <summary><b>Docs</b> (14)</summary>
 
-| Title |
-|---|
-| [2026 American Dream Report Explained](https://claude.ai/artifact/5ZDbLTH688X6fNVktfmRSP) |
-| [Division Diagnostic: Grade 5](https://claude.ai/artifact/YBeTjgSQ2qKtb65uMpWBpC) |
-| [Four Siblings Character Sheet: Leo, Mia, Kai, Anna](https://claude.ai/artifact/LHR7t13NdmsFpVaNroRG2v) |
-| [Grade 5 Multiplication & Division Practice](https://claude.ai/artifact/F8pfAQvdrmgeHhJtPbC1Ze) |
-| [Lesson 9 Extra Practice: Place Value to Multiply](https://claude.ai/artifact/LUWgay7CQzPczHPyx3xVF5) |
-| [Middle School Biology Bilingual Mini Lessons](https://claude.ai/artifact/7gMDnFSgpKEKL6VotDzGZW) |
-| [Middle School Chemistry Mini Lessons](https://claude.ai/artifact/VrWymGccax1FxnCaZDgshu) |
-| [Middle School Physics Bilingual Mini Lessons](https://claude.ai/artifact/4QRbWyzSoFJWCzyy6NqD6C) |
-| [NVIDIA Financial Statements & Valuation Primer](https://claude.ai/artifact/QzYwrpnCzqkLMtoNSgSjk4) |
-| [One Turn: Rubik’s Cube Permutation Podcast Script](https://claude.ai/artifact/YNTXjstnqCuB4YpMbiYAYK) |
-| [Podcast Transcript: Circuits & Ohm’s Law](https://claude.ai/artifact/9bbKhtcuEsetKyo2pgEsfa) |
-| [Revelation and Today’s World](https://claude.ai/artifact/Pd4wC8QvpnjcDpsPZBCHyB) |
-| [Vegas Roulette Rules — Podcast Script](https://claude.ai/artifact/AAwYp6bqAxBSrYZ2a7xPTR) |
-| [When You Trap a Tiger: Summary Essay](https://claude.ai/artifact/DLgs8mAQaaCVcrbFgdyfix) |
+| Title | Chinese |
+|---|---|
+| [2026 American Dream Report Explained](https://claude.ai/artifact/5ZDbLTH688X6fNVktfmRSP) |  |
+| [Division Diagnostic: Grade 5](https://claude.ai/artifact/YBeTjgSQ2qKtb65uMpWBpC) |  |
+| [Four Siblings Character Sheet: Leo, Mia, Kai, Anna](https://claude.ai/artifact/LHR7t13NdmsFpVaNroRG2v) |  |
+| [Grade 5 Multiplication & Division Practice](https://claude.ai/artifact/F8pfAQvdrmgeHhJtPbC1Ze) |  |
+| [Lesson 9 Extra Practice: Place Value to Multiply](https://claude.ai/artifact/LUWgay7CQzPczHPyx3xVF5) |  |
+| [Middle School Biology Bilingual Mini Lessons](https://claude.ai/artifact/7gMDnFSgpKEKL6VotDzGZW) |  |
+| [Middle School Chemistry Mini Lessons](https://claude.ai/artifact/VrWymGccax1FxnCaZDgshu) |  |
+| [Middle School Physics Bilingual Mini Lessons](https://claude.ai/artifact/4QRbWyzSoFJWCzyy6NqD6C) |  |
+| [NVIDIA Financial Statements & Valuation Primer](https://claude.ai/artifact/QzYwrpnCzqkLMtoNSgSjk4) |  |
+| [One Turn: Rubik’s Cube Permutation Podcast Script](https://claude.ai/artifact/YNTXjstnqCuB4YpMbiYAYK) |  |
+| [Podcast Transcript: Circuits & Ohm’s Law](https://claude.ai/artifact/9bbKhtcuEsetKyo2pgEsfa) |  |
+| [Revelation and Today’s World](https://claude.ai/artifact/Pd4wC8QvpnjcDpsPZBCHyB) |  |
+| [Vegas Roulette Rules — Podcast Script](https://claude.ai/artifact/AAwYp6bqAxBSrYZ2a7xPTR) |  |
+| [When You Trap a Tiger: Summary Essay](https://claude.ai/artifact/DLgs8mAQaaCVcrbFgdyfix) |  |
 
 [Own page](categories/docs.md)
 
 </details>
 
 <details>
-<summary><b>Design</b> (12)</summary>
+<summary><b>Design</b> (9)</summary>
 
-| Title |
-|---|
-| [Force & Motion Infographic Poster](https://claude.ai/artifact/86uDS2HbY4FPe1a5ozAgUw) |
-| [Hero Classroom Door(v1)](https://claude.ai/artifact/NsCNaWNQG4QYkwaC1WeKhS) |
-| [Hero Classroom Door(v2)](https://claude.ai/artifact/PAdUJevZPjoFCHMMsXet1b) |
-| [Hero Classroom Door(v3)](https://claude.ai/artifact/K619U2FKHZ453i88JT1tME) |
-| [Hero Door Mockup](https://claude.ai/artifact/PhW4bKTuErhC43w3jFvwhE) |
-| [Hoover Dam Explorer Books](https://claude.ai/artifact/4PCd75eaxtv7D6jk3RWDtv) |
-| [Picture-to-Pencil Math – Grade 3 Multiplication Sample](https://claude.ai/artifact/KvAvxpk6EJQ3pcZ24P2Rou) |
-| [See the Math Worksheet](https://claude.ai/artifact/B2WWk6YfMAbcS6AFi1ebsy) |
-| [See-It Duo Character Designs](https://claude.ai/artifact/V8r5YM7HGLkB9X1KyQeL86) |
-| [Table Rush Starter Worksheet](https://claude.ai/artifact/WadYij7bEZyz5EKoT9tCwE) |
-| [Times Tables Workbook Covers](https://claude.ai/artifact/1ZMgutu6M7zYXYQnnrY4m5) |
-| [TOEFL Vocab Kids Mode](https://claude.ai/artifact/B8LkS3fhGx6AWDAqBQi3Q3) |
+| Title | Chinese |
+|---|---|
+| [Force & Motion Infographic Poster](https://claude.ai/artifact/86uDS2HbY4FPe1a5ozAgUw) |  |
+| [Hero Classroom Door](https://claude.ai/artifact/K619U2FKHZ453i88JT1tME) |  |
+| [Hoover Dam Explorer Books](https://claude.ai/artifact/4PCd75eaxtv7D6jk3RWDtv) |  |
+| [Picture-to-Pencil Math – Grade 3 Multiplication Sample](https://claude.ai/artifact/KvAvxpk6EJQ3pcZ24P2Rou) |  |
+| [See the Math Worksheet](https://claude.ai/artifact/B2WWk6YfMAbcS6AFi1ebsy) |  |
+| [See-It Duo Character Designs](https://claude.ai/artifact/V8r5YM7HGLkB9X1KyQeL86) |  |
+| [Table Rush Starter Worksheet](https://claude.ai/artifact/WadYij7bEZyz5EKoT9tCwE) |  |
+| [Times Tables Workbook Covers](https://claude.ai/artifact/1ZMgutu6M7zYXYQnnrY4m5) |  |
+| [TOEFL Vocab Kids Mode](https://claude.ai/artifact/B8LkS3fhGx6AWDAqBQi3Q3) |  |
 
 [Own page](categories/design.md)
 
@@ -117,9 +112,9 @@ Each category is sorted A–Z. Click a category name to expand it.
 <details>
 <summary><b>Sheets</b> (1)</summary>
 
-| Title |
-|---|
-| [NVIDIA Valuation Sheet](https://claude.ai/artifact/CHFW8JBzC1VBUcDVNwE3Vy) |
+| Title | Chinese |
+|---|---|
+| [NVIDIA Valuation Sheet](https://claude.ai/artifact/CHFW8JBzC1VBUcDVNwE3Vy) |  |
 
 [Own page](categories/sheets.md)
 
