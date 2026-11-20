@@ -148,7 +148,7 @@ const cmp=(x,y)=>nm(x.t).localeCompare(nm(y.t),'en',{sensitivity:'base',numeric:
 const chev='<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>';
 const card=i=>{const c=cat(i.k);return `<article class="card" style="--c:${c.c}">
   <div class="top"><span class="tag"><i></i>${c.n}</span></div>
-  ${i.img?(i.p?`<a class="thumblink" href="${i.p}" target="_blank" rel="noopener" title="Open site"><img class="thumb" src="${i.img}" alt="" loading="lazy" onerror="this.parentNode.remove()"></a>`:`<img class="thumb" src="${i.img}" alt="" loading="lazy" onerror="this.remove()">`):''}<div class="tt"><h3>${esc(i.t)}</h3>${i.n?`<p class="note">${esc(i.n)}</p>`:''}${LZ&&i.zh?`<p class="zht">${esc(i.zh)}</p>`:''}</div>
+  ${i.img?(i.p?`<a class="thumblink" href="${i.p}" target="_blank" rel="noopener" title="Open site"><img class="thumb" src="${i.img}" alt="" loading="lazy" onerror="this.parentNode.remove()"></a>`:`<img class="thumb" src="${i.img}" alt="" loading="lazy" onerror="this.remove()">`):''}<div class="tt"><h3>${esc(i.t)}</h3>${i.n?`<p class="note">${esc(i.n)}</p>`:''}${i.zh?`<p class="zht">${esc(i.zh)}</p>`:''}</div>
   <div class="acts"><a class="btn go" href="${i.u}" target="_blank" rel="noopener">${i.k==='github'?'Repo':T('Open','開啟')}</a>
   ${i.alt?`<a class="btn" href="${A+i.alt}" target="_blank" rel="noopener">Chinese</a>`:''}
   ${i.k!=='project'?`<button class="btn" data-copy="${i.p||i.u}">${T('Copy link','複製')}</button>`:''}</div></article>`};
