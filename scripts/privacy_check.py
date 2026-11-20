@@ -24,7 +24,7 @@ def main():
     items = json.loads((ROOT / 'items.json').read_text(encoding='utf-8'))['items']
     bad = []
     for i in items:
-        text = f"{i['t']} {i.get('n', '')}"
+        text = f"{i['t']} {i.get('n', '')} {i.get('zh', '')}"
         low = text.lower()
         for w in WORDS:
             if re.search(r'\b' + re.escape(w) + r's?\b', low) and i['t'] not in allow:
@@ -35,8 +35,8 @@ def main():
         for rx in DATE:
             if rx.search(text):
                 bad.append(f"items.json: '{i['t']}' contains a date")
-        if set(i) - {'key', 'k', 't', 'id', 'n', 'alt'}:
-            bad.append(f"items.json: '{i['t']}' has extra fields {sorted(set(i) - {'key','k','t','id','n','alt'})}")
+        if set(i) - {'key', 'k', 't', 'id', 'n', 'alt', 'zh'}:
+            bad.append(f"items.json: '{i['t']}' has extra fields {sorted(set(i) - {'key','k','t','id','n','alt','zh'})}")
     # private words must not appear anywhere in the published files
     for p in ['index.html', 'README.md', *[str(x.relative_to(ROOT)) for x in (ROOT / 'categories').glob('*.md')]]:
         low = (ROOT / p).read_text(encoding='utf-8').lower()

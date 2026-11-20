@@ -5,84 +5,96 @@
    "k": "github",
    "t": "bible",
    "id": "bible",
-   "n": "Bible timeline"
+   "n": "Bible timeline",
+   "zh": "聖經時間軸"
   },
   {
    "key": "gh-english-lab",
    "k": "github",
    "t": "english-lab",
    "id": "english-lab",
-   "n": "High school English, grades 9–12"
+   "n": "High school English, grades 9–12",
+   "zh": "高中英文 9–12 年級"
   },
   {
    "key": "gh-expense-tracker",
    "k": "github",
    "t": "expense-tracker",
    "id": "expense-tracker",
-   "n": "Family expense tracker"
+   "n": "Family expense tracker",
+   "zh": "食衣住行育樂帳本"
   },
   {
    "key": "gh-kids-reward-app",
    "k": "github",
    "t": "kids-reward-app",
    "id": "kids-reward-app",
-   "n": "Kids reward system"
+   "n": "Kids reward system",
+   "zh": "孩子獎勵系統"
   },
   {
    "key": "gh-math-lab",
    "k": "github",
    "t": "math-lab",
    "id": "math-lab",
-   "n": "Algebra 1A/1B, visual"
+   "n": "Algebra 1A/1B, visual",
+   "zh": "Algebra 1A/1B 圖解"
   },
   {
    "key": "gh-mini-slide",
    "k": "github",
    "t": "mini-slide-",
    "id": "mini-slide-",
-   "n": "Science mini lessons"
+   "n": "Science mini lessons",
+   "zh": "科學迷你課"
   },
   {
    "key": "gh-radical-challenge",
    "k": "github",
    "t": "radical-challenge",
    "id": "radical-challenge",
-   "n": "Chinese radicals challenge"
+   "n": "Chinese radicals challenge",
+   "zh": "部首大挑戰"
   },
   {
    "key": "gh-science",
    "k": "github",
    "t": "science",
    "id": "science",
-   "n": "Science and science timeline"
+   "n": "Science and science timeline",
+   "zh": "自然科學・科學時間軸"
   },
   {
    "key": "gh-social-studies",
    "k": "github",
    "t": "social-studies",
    "id": "social-studies",
-   "n": "Economics, civics, U.S. and world history"
+   "n": "Economics, civics, U.S. and world history",
+   "zh": "看懂經濟、公民、美國史、世界史"
   },
   {
    "key": "gh-stock_dashboard",
    "k": "github",
    "t": "stock_dashboard",
    "id": "stock_dashboard",
-   "n": "Stock research dashboard"
+   "n": "Stock research dashboard",
+   "zh": "股票研究終端"
   },
   {
    "key": "gh-table-rush",
    "k": "github",
    "t": "table-rush",
    "id": "table-rush",
-   "n": "Includes Product Bingo"
+   "n": "Includes Product Bingo",
+   "zh": "含乘積賓果"
   },
   {
    "key": "gh-toefl-vocab",
    "k": "github",
    "t": "-toefl-vocab",
    "id": "-toefl-vocab",
-   "n": "1,000+ TOEFL words"
+   "n": "1,000+ TOEFL words",
+   "zh": "TOEFL 單字 1,000+"
   }
  ]
 }
